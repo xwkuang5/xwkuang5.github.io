@@ -1,20 +1,22 @@
 ---
 layout: post
 title: A study on Neo4j's pagecache
+published: false
 ---
 
 As my course project for [CS848 Graph Analytics and Data Management](https://cs.uwaterloo.ca/~ssalihog/courses/cs848-winter-2020.html) in my last term at the University of Waterloo, I did an empirical study on the page cache component of Neo4j, an open-source graph database system. Here is a somewhat lengthy blog post about it :)
 
 
 ## Table of Content
+- [Table of Content](#table-of-content)
 - [GClock](#gclock)
-- [LRU, Friends, or Foes?](#lru-friends-or-foes)
+- [ LRU, Friends, or Foes?](#-lru-friends-or-foes)
 - [Making LRU More Performant](#making-lru-more-performant)
 - [Experiment](#experiment)
 - [Results](#results)
 - [Ending](#ending)
 - [Changelog](#changelog)
-  * [2021-06-26 updates](#2021-06-26-updates)
+  - [2021-06-26 updates](#2021-06-26-updates)
 - [Footnote](#footnote)
 
 ## GClock

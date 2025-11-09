@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Looking back at my undergraduate final year project
+published: false
 ---
 
 As I was putting up my new website, I looked back at my final year project as an undergraduate student. I realized I have forgotten most of the technical details and found many programming mistakes that I made in the implementation. It has been an interesting exercise to go retro and reflect a bit on the project So I decided to write a short blog post about it.
