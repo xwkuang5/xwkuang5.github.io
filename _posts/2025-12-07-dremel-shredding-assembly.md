@@ -171,20 +171,7 @@ For example, if we see a repetition level that implies we are repeating `doc.lin
 
 This is where `return_to_level` comes in. We use the `next_repetition_level` to determine the "full repetition level" — the definition level of the node that is actually repeating.
 
-```python
-# In assembly.py
-
-next_repetition_level = reader.peek()[1] if reader.has_next() else 0
-next_descriptor = fsm[descriptor][next_repetition_level]
-
-if next_descriptor is not END and assembler.is_repeating(descriptor, next_descriptor):
-    # This is the critical step!
-    # We find the definition level corresponding to the repetition
-    target_def_level = descriptor.full_repetition_level(next_repetition_level)
-    assembler.return_to_level(target_def_level)
-```
-
-By calling `return_to_level`, the assembler closes all open scopes (nested dicts/lists) deeper than the repeating node, effectively preparing the buffer for the new repetition.
+By calling `return_to_level` with the full repetition level, the assembler closes all open scopes (nested dicts/lists) deeper than the repeating node, effectively preparing the buffer for the new repetition.
 
 ## Demo
 
